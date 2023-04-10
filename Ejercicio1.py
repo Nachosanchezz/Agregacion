@@ -2,8 +2,8 @@ class Empleado():
     def __init__(self, nombre):
         self.nombre = nombre
     def destruir(self):
-        an = self.nombre
-        print("Se destruye al empleado", an)
+        em = self.nombre
+        print("Se destruye al empleado", em)
         del self
         return an
     def __str__(self):
@@ -15,8 +15,8 @@ class Edificio():
         self.ciudad = ciudad
         self.empleados = empleados
     def destruir(self):
-        na = self.nombre
-        print("Se destruye el edificio", na)
+        ed = self.nombre
+        print("Se destruye el edificio", ed)
         for empleado in self.empleados:
             empleado.destruir()
         del self
@@ -24,7 +24,20 @@ class Edificio():
     def __str__(self):
         return self.nombre
     
-class Ciudad():
+class Empresa():
+    def __init__(self, nombre, edificios=[]):
+        self.nombre = nombre
+        self.edificios = edificios
+    def destruir(self):
+        em = self.nombre
+        print("Se destruye la empresa", em)
+        for edificio in self.edificios:
+            edificio.destruir()
+        del self
+        return em
+    def __str__(self):
+        return self.nombre
+    
 
     
    
