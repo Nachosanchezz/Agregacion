@@ -38,6 +38,20 @@ class Empresa():
     def __str__(self):
         return self.nombre
     
+class Ciudad():
+    def __init__(self, nombre, empresas=[]):
+        self.nombre = nombre
+        self.empresas = empresas
+    def destruir(self):
+        ci = self.nombre
+        print("Se destruye la ciudad", ci)
+        for empresa in self.empresas:
+            empresa.destruir()
+        del self
+        return ci
+    def __str__(self):
+        return self.nombre
+    
 
     
    
