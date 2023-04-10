@@ -17,11 +17,14 @@ class Edificio():
     def destruir(self):
         na = self.nombre
         print("Se destruye el edificio", na)
+        for empleado in self.empleados:
+            empleado.destruir()
         del self
-        return na 
-    for empleado in self.empleados:
-        empleado.destruir()
+        return na
     def __str__(self):
+        return self.nombre
+    
+class Ciudad():
 
     
    
