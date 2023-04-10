@@ -1,0 +1,3 @@
+El mensaje de "Yang destruido" se muestra después del signo de interrogación porque la función '__del__()' se ejecuta
+cuando el objeto (yang) se destruye. Para que el mensaje se muestre antes del signo de interrogación, se debe imprimir
+el signo de interrogación antes de crear el objeto (yang) y luego destruirlo, y llama a la función '__del__()'. 
