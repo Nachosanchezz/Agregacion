@@ -52,6 +52,14 @@ class Ciudad():
     def __str__(self):
         return self.nombre
     
+empleado1 = Empleado("Martin")
+empleado2 = Empleado("Salim")
+empleado3 = Empleado("Xing")
+edificio1 = Edificio("A", "Nueva York", [empleado1, empleado2])
+edificio2 = Edificio("B", "Nueva York", [empleado3])
+edificio3 = Edificio("C", "Los Angeles", [empleado1, empleado2, empleado3])
+empresa = Empresa("YooHoo", [edificio1, edificio2, edificio3])
+ciudad = Ciudad("Nueva York", [empresa])
 
     
    
