@@ -2,10 +2,10 @@ class Empleado():
     def __init__(self, nombre):
         self.nombre = nombre
     def destruir(self):
-        name = self.nombre
-        print("Se destruye al empleado", name)
+        an = self.nombre
+        print("Se destruye al empleado", an)
         del self
-        return name
+        return an
     def __str__(self):
         return self.nombre
     
@@ -14,10 +14,17 @@ class Edificio():
         self.nombre = nombre
         self.ciudad = ciudad
         self.empleados = empleados
-    def agregar_empleado(self, empleado):
-        self.empleados.append(empleado)
+    def destruir(self):
+        na = self.nombre
+        print("Se destruye el edificio", na)
+        del self
+        return na 
+    for empleado in self.empleados:
+        empleado.destruir()
     def __str__(self):
-        return self.nombre
+
+    
+   
 
 
         
